@@ -10,7 +10,7 @@
         <input class="form-control mb-2" type="text" name="name" id="name" placeholder="Ej: Camiseta" required
           #articleName="ngModel" ngModel>
 
-        <div class="error" *ngIf="(articleName.dirty || message) && articleName.invalid">El nombre es necesario</div>
+        <div class="text-danger small mt-1" *ngIf="(articleName.dirty || message) && articleName.invalid">El nombre es necesario</div>
       </div>
 
       <div class="form-group mb-3">
@@ -18,7 +18,7 @@
         <input class="form-control mb-2" type="number" name="price" id="price" placeholder="Ej: 29.99" min="0"
           #articlePrice="ngModel" required ngModel>
 
-        <div class="error" *ngIf="(articlePrice.dirty || message) && articlePrice.invalid">El precio es necesario</div>
+        <div class="text-danger small mt-1" *ngIf="(articlePrice.dirty || message) && articlePrice.invalid">El precio es necesario</div>
       </div>
 
       <div class="form-group mb-3">
@@ -28,7 +28,7 @@
           pattern="^https?:\/\/[a-zA-Z0-9]+(\.[a-zA-Z0-9]+)*\.[a-zA-Z]{2,3}\/[a-zA-Z0-9\-\.]+(\.[a-zA-Z]{2,4})$"
           #articleImageUrl="ngModel" ngModel>
 
-        <div class="error" *ngIf="(articleImageUrl.dirty || message) && articleImageUrl.invalid">
+        <div class="text-danger small mt-1" *ngIf="(articleImageUrl.dirty || message) && articleImageUrl.invalid">
           <div *ngIf="articleImageUrl.errors?.['required']">La URL de la imagen es necesaria</div>
           <div *ngIf="articleImageUrl.errors?.['pattern']">La URL de la imagen no es válida</div>
         </div>

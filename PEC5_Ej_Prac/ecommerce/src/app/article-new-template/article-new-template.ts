@@ -23,6 +23,7 @@ export class ArticleNewTemplate implements OnInit {
     } else {
       this.message = '';
       const article: Article = form.value.article;
+      console.log(article);
     }
   }
 }

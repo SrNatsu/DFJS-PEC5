@@ -1,13 +1,13 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import { Navbar } from './navbar/navbar';
 import { ArticleList } from './article-list/article-list';
 import { ArticleNewTemplate } from './article-new-template/article-new-template';
+import { ArticleNewReactive } from './article-new-reactive/article-new-reactive';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, Navbar, ArticleList, ArticleNewTemplate],
+  imports: [Navbar, ArticleList, ArticleNewTemplate, ArticleNewReactive],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
